@@ -1,0 +1,309 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "meritve/1.0.0": {
+        "dependencies": {
+          "OxyPlot.Core": "2.1.2",
+          "OxyPlot.SkiaSharp": "2.1.2",
+          "Plotly.NET": "5.0.0"
+        },
+        "runtime": {
+          "meritve.dll": {}
+        }
+      },
+      "DynamicObj/2.0.0": {
+        "dependencies": {
+          "FSharp.Core": "8.0.300",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DynamicObj.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "FSharp.Core/8.0.300": {
+        "runtime": {
+          "lib/netstandard2.1/FSharp.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.3.24.21101"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.1/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard2.1/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard2.1/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard2.1/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.1/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard2.1/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard2.1/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard2.1/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard2.1/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.1/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard2.1/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard2.1/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Giraffe.ViewEngine.StrongName/2.0.0-alpha1": {
+        "dependencies": {
+          "FSharp.Core": "8.0.300"
+        },
+        "runtime": {
+          "lib/net6.0/Giraffe.ViewEngine.StrongName.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "HarfBuzzSharp/2.6.1.4": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/HarfBuzzSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.6.1.4"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/tizen-armel/native/libHarfBuzzSharp.so": {
+            "rid": "tizen-armel",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/tizen-x86/native/libHarfBuzzSharp.so": {
+            "rid": "tizen-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "OxyPlot.Core/2.1.2": {
+        "runtime": {
+          "lib/netstandard2.0/OxyPlot.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "OxyPlot.SkiaSharp/2.1.2": {
+        "dependencies": {
+          "OxyPlot.Core": "2.1.2",
+          "SkiaSharp": "1.68.3",
+          "SkiaSharp.HarfBuzz": "1.68.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OxyPlot.SkiaSharp.dll": {
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "Plotly.NET/5.0.0": {
+        "dependencies": {
+          "DynamicObj": "2.0.0",
+          "FSharp.Core": "8.0.300",
+          "Giraffe.ViewEngine.StrongName": "2.0.0-alpha1",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plotly.NET.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp/1.68.3": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkiaSharp.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.3.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/tizen-armel/native/libSkiaSharp.so": {
+            "rid": "tizen-armel",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/tizen-x86/native/libSkiaSharp.so": {
+            "rid": "tizen-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SkiaSharp.HarfBuzz/1.68.3": {
+        "dependencies": {
+          "HarfBuzzSharp": "2.6.1.4",
+          "SkiaSharp": "1.68.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.3.0"
+          }
+        }
+      },
+      "System.Memory/4.5.3": {}
+    }
+  },
+  "libraries": {
+    "meritve/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DynamicObj/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-26GDec7PIgj/vyRGk+Ijogk2PU24ltqy9s2fQudJtXik0nLU56Ydq/XXNYWMRBxn9HtFiSFigOMQ3yZ2HavnVA==",
+      "path": "dynamicobj/2.0.0",
+      "hashPath": "dynamicobj.2.0.0.nupkg.sha512"
+    },
+    "FSharp.Core/8.0.300": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jv44fV7TNglyMku89lQcA4Q6mFKLyHb2bs1Yb72nvSVc+cHplEnoZ4XQUaaTLJGUTx/iMqcrkYGtaLzkkIhpaA==",
+      "path": "fsharp.core/8.0.300",
+      "hashPath": "fsharp.core.8.0.300.nupkg.sha512"
+    },
+    "Giraffe.ViewEngine.StrongName/2.0.0-alpha1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jGmYvcCyMTSF8DBdK7KGfkFILyaGAn1QAONpRPSNCXSVhp3RMRCvqsIQakvxfo6lPQFaP+AsvBtkJ1PSqdptKA==",
+      "path": "giraffe.viewengine.strongname/2.0.0-alpha1",
+      "hashPath": "giraffe.viewengine.strongname.2.0.0-alpha1.nupkg.sha512"
+    },
+    "HarfBuzzSharp/2.6.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7qJsdLtOxDY495v3SV9b8HEyu8/7Sf6OqHjPV5O09qh13r1phDvhj+bOdC+lcvgrF2M/FWq322gOeLgsT9J2cQ==",
+      "path": "harfbuzzsharp/2.6.1.4",
+      "hashPath": "harfbuzzsharp.2.6.1.4.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "OxyPlot.Core/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/BuPL1Wa7ZhpKA2DBe72md+S8PgIHF+UP/NsKfO9BiheXnbns1/tqS7s2MWIR1xFy5i+PWVC67KziGPY48mNgA==",
+      "path": "oxyplot.core/2.1.2",
+      "hashPath": "oxyplot.core.2.1.2.nupkg.sha512"
+    },
+    "OxyPlot.SkiaSharp/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cR2wrcTvsykHNGm5kWxY4X1RsTDL/KZQ5xQU1mP6Fv+lGtcfmMQ2p1Ti+EQ5Lb5BuDWUTNoFhSCvj0/1LnFgxg==",
+      "path": "oxyplot.skiasharp/2.1.2",
+      "hashPath": "oxyplot.skiasharp.2.1.2.nupkg.sha512"
+    },
+    "Plotly.NET/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zqbjtk56nFkQuj2fdTko7gJ9kuavps/yKR83QIAVTIwYHKR/yFelCOZyaIZ/XJs4m6p9Irrf0KzEqkiQabZxNQ==",
+      "path": "plotly.net/5.0.0",
+      "hashPath": "plotly.net.5.0.0.nupkg.sha512"
+    },
+    "SkiaSharp/1.68.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-78YvBVmR52PoLPf0aTZMWOZVrMxlXlgPOgU3vGk7W50wrYHi3lSd886ccYd7MkJmm+oInP8shf0vSy1321ERCQ==",
+      "path": "skiasharp/1.68.3",
+      "hashPath": "skiasharp.1.68.3.nupkg.sha512"
+    },
+    "SkiaSharp.HarfBuzz/1.68.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zo/bZafpVYyUbl2W+Fvgqkt9tfLnUPsfm8NI2ULhxVgD56NI0PoOKrZL72fh9ORa2QG9agaRmW160308naGuuA==",
+      "path": "skiasharp.harfbuzz/1.68.3",
+      "hashPath": "skiasharp.harfbuzz.1.68.3.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    }
+  }
+}
