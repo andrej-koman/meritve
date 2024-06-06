@@ -22,14 +22,25 @@ class DirectoryInfo(string dir)
     {
         var fileInfo = new Dictionary<string, (long, int)>(); // (Size, Lines)
 
+        // Check if the filename exists in the directory
         foreach (var file in files)
         {
-            long fileSize = new FileInfo(file).Length;
-            int lineCount = File.ReadAllLines(file).Length;
+            var allFiles = Directory.GetFiles(dir, file, SearchOption.AllDirectories);
+            if (allFiles == null) continue;
 
-            fileInfo[Path.GetFileName(file)] = (fileSize, lineCount);
+            var validFiles = allFiles.Where(f => !f.Contains("dashUI", StringComparison.OrdinalIgnoreCase)).ToArray();
+
+            if (validFiles.Any())
+            {
+                foreach (var fileInDir in validFiles)
+                {
+                    long fileSize = new FileInfo(fileInDir).Length;
+                    int lineCount = File.ReadAllLines(fileInDir).Length;
+
+                    fileInfo[file] = (fileSize, lineCount);
+                }
+            }
         }
-
         return fileInfo;
     }
 }
