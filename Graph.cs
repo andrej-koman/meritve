@@ -1,9 +1,8 @@
-using System;
 using OxyPlot;
+using OxyPlot.Legends;
 using OxyPlot.Series;
 using OxyPlot.SkiaSharp;
 using SkiaSharp;
-// Create a new PlotModel
 
 class Graph
 {
@@ -14,23 +13,23 @@ class Graph
     {
         this.title = title;
         plotModel = new PlotModel { Title = title };
+        plotModel.Legends.Add(new Legend { LegendPosition = LegendPosition.TopCenter, LegendPlacement = LegendPlacement.Outside, LegendOrientation = LegendOrientation.Horizontal, LegendTitle = "Legenda"});
     }
 
-    public void AddLineSeries()
+    public void AddLineSeries(long[] values, string seriesName)
     {
 
         // Create a new LineSeries and add some data points
         var lineSeries = new LineSeries
         {
-            Title = "Series 1",
+            Title = seriesName,
             MarkerType = MarkerType.Circle
         };
 
-        lineSeries.Points.Add(new DataPoint(0, 0));
-        lineSeries.Points.Add(new DataPoint(10, 18));
-        lineSeries.Points.Add(new DataPoint(20, 12));
-        lineSeries.Points.Add(new DataPoint(30, 8));
-        lineSeries.Points.Add(new DataPoint(40, 15));
+        for (int i = 0; i < values.Length; i++)
+        {
+            lineSeries.Points.Add(new DataPoint(i, values[i]));
+        }
 
         // Add the LineSeries to the PlotModel
         plotModel.Series.Add(lineSeries);

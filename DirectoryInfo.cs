@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 class DirectoryInfo(string dir)
 {
     private readonly string dir = dir;
@@ -12,7 +10,10 @@ class DirectoryInfo(string dir)
             long fileSize = new FileInfo(file).Length;
             int lineCount = File.ReadAllLines(file).Length;
 
-            fileInfo[Path.GetFileName(file)] = (fileSize, lineCount);
+            // Exclude the everything before including the dashUI folder
+            string filePath = file.Substring(file.IndexOf("dashUI", StringComparison.OrdinalIgnoreCase) + 7);
+
+            fileInfo[filePath] = (fileSize, lineCount); // Use full path as key
         }
 
         return fileInfo;
@@ -22,25 +23,38 @@ class DirectoryInfo(string dir)
     {
         var fileInfo = new Dictionary<string, (long, int)>(); // (Size, Lines)
 
-        // Check if the filename exists in the directory
         foreach (var file in files)
         {
-            var allFiles = Directory.GetFiles(dir, file, SearchOption.AllDirectories);
-            if (allFiles == null) continue;
+            // Check if the filename exists in the directory
+            var checkFile = dir + "\\" + file;
 
-            var validFiles = allFiles.Where(f => !f.Contains("dashUI", StringComparison.OrdinalIgnoreCase)).ToArray();
-
-            if (validFiles.Any())
+            // If the file exists, get the file size and line count
+            if (File.Exists(checkFile))
             {
-                foreach (var fileInDir in validFiles)
-                {
-                    long fileSize = new FileInfo(fileInDir).Length;
-                    int lineCount = File.ReadAllLines(fileInDir).Length;
+                long fileSize = new FileInfo(checkFile).Length;
+                int lineCount = File.ReadAllLines(checkFile).Length;
 
-                    fileInfo[file] = (fileSize, lineCount);
-                }
+                fileInfo[file] = (fileSize, lineCount);
             }
         }
         return fileInfo;
+    }
+
+    public static string[] GetMatchingFiles(string[] files, string dir)
+    {
+        var matchingFiles = new List<string>();
+
+        foreach (var file in files)
+        {
+            // Check if the filename exists in the directory
+            var checkFile = dir + "\\" + file;
+
+            // If the file exists, get the file size and line count
+            if (File.Exists(checkFile))
+            {
+                matchingFiles.Add(file);
+            }
+        }
+        return matchingFiles.ToArray();
     }
 }
