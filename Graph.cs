@@ -44,7 +44,7 @@ class Graph
         {
             var renderer = new PngExporter { Width = width, Height = height };
             
-            using (var stream = File.OpenWrite(title))
+            using (var stream = File.OpenWrite(title + ".png"))
             {
                 renderer.Export(plotModel, stream);
             }
